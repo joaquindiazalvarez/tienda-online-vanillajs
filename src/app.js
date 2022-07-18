@@ -1,11 +1,17 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+"use strict";
+/**
+ * The entry point
+ */
+import * as css from "./style.css";
+import App, { bringAllProducts, search, select } from "./views/index.js";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+window.addEventListener("load", () => {
+  search();
+  select();
+  const app = new App(document.getElementById("app"));
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  // A very simple component setup
+  app.render();
+
+  bringAllProducts();
+});

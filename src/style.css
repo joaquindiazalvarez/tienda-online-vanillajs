@@ -1,1 +1,97 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+/* @font-face {
+  font-family: "LTEnergy-Bolditalic";
+  src: url('./fonts/LTEnergy-BoldItalic.ttf') format('truetype');
+}  */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+}
+
+body,
+html {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font: Helvetica;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+#header {
+  padding: 1em;
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+#header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#header p {
+  color: white;
+}
+
+[data-component="app"] {
+  padding: 1em;
+  background: rgb(140, 140, 140);
+  min-height: 10em;
+  color: #222;
+}
+
+#categoryName {
+  font-family: "Helvetica";
+}
+.btnCategory {
+  font-weight: bold;
+}
+.card {
+  height: 450px;
+}
+img {
+  height: auto;
+}
+.card-img-top {
+  height: 280px;
+}
+#card {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  padding-right: 100px;
+  justify-content: center;
+  align-items: center;
+}
+#card .card {
+  margin: 10px;
+  /* min-width: 309px; */
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 40px;
+}
+.card-img-top {
+  border-radius: 10px;
+}
+.card-title {
+  height: 50px;
+}
+.btnCategory {
+  border: 2px solid #000000;
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  color: black;
+  box-shadow: 1px 1px 5px 1px rgb(255, 255, 255);
+}
+#message {
+  font-weight: bold;
+  margin: 100px;
+}

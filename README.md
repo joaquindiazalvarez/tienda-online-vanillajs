@@ -51,11 +51,11 @@ también posee un selector de orden, dentro del cual tenemos las opciones:
 - Menor Precio  
 - Mayor Precio
 
-[descuento&&orden](https://imagizer.imageshack.com/img923/874/f1xxRU.png)  
+![descuento&&orden](https://imagizer.imageshack.com/img923/874/f1xxRU.png)  
 
 Por último si la lista de productos tiene más de 12 productos, se agregará una paginación:  
 
-[paginación](https://imagizer.imageshack.com/img922/1990/qHCmQ4.png)
+![paginación](https://imagizer.imageshack.com/img922/1990/qHCmQ4.png)
 
 # ⚡Arquitectura de la app
 ## Descripción

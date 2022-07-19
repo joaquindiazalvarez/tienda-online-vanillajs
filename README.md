@@ -1,5 +1,5 @@
 # ⚡VanillaJS - tienda online  
-[front](https://imagizer.imageshack.com/img924/7391/YUvAUd.png)
+![front](https://imagizer.imageshack.com/img924/7391/YUvAUd.png)
 ## Sobre este proyecto...
   Este es un proyecto el cual está dividido en frontend y backend    
   Este repositorio pertenece a la parte del frontend (Vanilla JS)  

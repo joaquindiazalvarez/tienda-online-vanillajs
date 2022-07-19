@@ -44,7 +44,7 @@ La segunda opción es clickear uno de los botones de categoría:
 
 Al presionar la categoría se mostrarán todos los producto de dicha categoría  
 
-no importando la opción que hayas elegido, la aplicación tiene un checkbox de desccuento que si se presiona, muestra solo los productos con descuento.  
+no importando la opción que hayas elegido, la aplicación tiene un checkbox de descuento que si se presiona, muestra solo los productos con descuento.  
 también posee un selector de orden, dentro del cual tenemos las opciones:
 - A a la Z  
 - Z a la A  

@@ -110,3 +110,11 @@ li {
 p {
   margin: 5px;
 }
+.form-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-check-input {
+  padding-top: 9px;
+}

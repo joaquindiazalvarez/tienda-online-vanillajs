@@ -70,31 +70,79 @@ const changeTitle = category => {
 export const selectCategory = () => {
   var select = document.querySelector("#categorySelector");
   select.addEventListener("change", e => {
+    var checked = document.querySelector("#check").checked;
     let inputValue = document.getElementById("searchInput").value;
     let categorySelected = document.querySelector("#categorySelector").value;
     let orderSelectedValue = document.getElementById("orderSelector").value;
-    bringProductsSearch(inputValue, categorySelected, orderSelectedValue);
+    bringProductsSearch(
+      inputValue,
+      categorySelected,
+      orderSelectedValue,
+      checked
+    );
   });
 };
 export const search = () => {
   const input = document.getElementById("searchInput");
   input.addEventListener("keyup", function(e) {
+    var checked = document.querySelector("#check").checked;
     let categorySelected = document.querySelector("#categorySelector").value;
     let orderSelectedValue = document.getElementById("orderSelector").value;
-    bringProductsSearch(e.target.value, categorySelected, orderSelectedValue);
+    bringProductsSearch(
+      e.target.value,
+      categorySelected,
+      orderSelectedValue,
+      checked
+    );
     changeTitle("BÚSQUEDA");
   });
 };
 export const selectOrder = () => {
-  var select = document.querySelector("#orderSelector");
-  select.addEventListener("change", e => {
+  let parent = document.getElementById("orderSelector");
+  parent.addEventListener("change", e => {
+    var checked = document.querySelector("#check").checked;
     let orderSelectedValue = document.getElementById("orderSelector").value;
     let categoryPressed = document.getElementById("categoryPressed").innerHTML;
     if (categoryPressed === "BÚSQUEDA") {
       let inputValue = document.getElementById("searchInput").value;
       let categorySelected = document.querySelector("#categorySelector").value;
-      bringProductsSearch(inputValue, categorySelected, orderSelectedValue);
-    } else bringProductsByCategory(map[categoryPressed], orderSelectedValue);
+      bringProductsSearch(
+        inputValue,
+        categorySelected,
+        orderSelectedValue,
+        checked
+      );
+    } else
+      bringProductsByCategory(
+        map[categoryPressed],
+        orderSelectedValue,
+        checked
+      );
+  });
+};
+
+export const checkDiscount = () => {
+  let parent = document.getElementById("check");
+  parent.addEventListener("change", e => {
+    console.log("prueba");
+    var checked = document.querySelector("#check").checked;
+    let orderSelectedValue = document.getElementById("orderSelector").value;
+    let categoryPressed = document.getElementById("categoryPressed").innerHTML;
+    if (categoryPressed === "BÚSQUEDA") {
+      let inputValue = document.getElementById("searchInput").value;
+      let categorySelected = document.querySelector("#categorySelector").value;
+      bringProductsSearch(
+        inputValue,
+        categorySelected,
+        orderSelectedValue,
+        checked
+      );
+    } else
+      bringProductsByCategory(
+        map[categoryPressed],
+        orderSelectedValue,
+        checked
+      );
   });
 };
 const mountPageSelector = pages => {
@@ -106,6 +154,7 @@ const mountPageSelector = pages => {
     newPill.setAttribute("class", "nav-item");
     newPill.innerHTML = `<button class="btn btn-primary">${page.toString()}</button>`;
     newPill.addEventListener("click", function(e) {
+      var checked = document.querySelector("#check").checked;
       let categoryPressed = document.getElementById("categoryPressed")
         .innerHTML;
       let orderSelectedValue = document.getElementById("orderSelector").value;
@@ -117,12 +166,18 @@ const mountPageSelector = pages => {
           inputValue,
           categorySelected,
           orderSelectedValue,
+          checked,
           page
         );
       } else {
         let categoryPressed = document.getElementById("categoryPressed")
           .innerHTML;
-        bringProductsByCategory(map[categoryPressed], orderSelectedValue, page);
+        bringProductsByCategory(
+          map[categoryPressed],
+          orderSelectedValue,
+          checked,
+          page
+        );
       }
     });
 
@@ -138,20 +193,22 @@ const addButton = category => {
   newButton.innerHTML = category;
   newButton.addEventListener("click", function(e) {
     changeTitle(e.target.value);
+    var checked = document.querySelector("#check").checked;
     let orderSelectorValue = document.getElementById("orderSelector").value;
-    bringProductsByCategory(map[e.target.value], orderSelectorValue);
+    bringProductsByCategory(map[e.target.value], orderSelectorValue, checked);
   });
   let categoryButtons = document.getElementById("categoryButtons");
   categoryButtons.appendChild(newButton);
 };
 
-const bringProductsByCategory = (category, order, page = 1) => {
+const bringProductsByCategory = (category, order, discount, page = 1) => {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   var raw = JSON.stringify({
     category: category,
-    order: order
+    order: order,
+    discount: discount
   });
 
   var requestOptions = {
@@ -162,7 +219,7 @@ const bringProductsByCategory = (category, order, page = 1) => {
   };
 
   fetch(
-    `https://backend-tienda-online.herokuapp.com/categories/getbycategory/${page}/`,
+    `http://127.0.0.1:5000/categories/getbycategory/${page}/`,
     requestOptions
   )
     .then(response => response.json())
@@ -181,7 +238,7 @@ const bringProductsByCategory = (category, order, page = 1) => {
     .catch(error => console.log("error", error));
 };
 
-const bringProductsSearch = (search, category, order, page = 1) => {
+const bringProductsSearch = (search, category, order, discount, page = 1) => {
   console.log(order);
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
@@ -189,7 +246,8 @@ const bringProductsSearch = (search, category, order, page = 1) => {
   var raw = JSON.stringify({
     search: search,
     category: category,
-    order: order
+    order: order,
+    discount: discount
   });
 
   var requestOptions = {
@@ -199,10 +257,7 @@ const bringProductsSearch = (search, category, order, page = 1) => {
     redirect: "follow"
   };
 
-  fetch(
-    `https://backend-tienda-online.herokuapp.com/search/${page}/`,
-    requestOptions
-  )
+  fetch(`http://127.0.0.1:5000/search/${page}/`, requestOptions)
     .then(response => response.json())
     .then(result => {
       renderCards([...result.products]);

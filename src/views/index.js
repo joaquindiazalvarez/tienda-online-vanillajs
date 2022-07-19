@@ -219,7 +219,7 @@ const bringProductsByCategory = (category, order, discount, page = 1) => {
   };
 
   fetch(
-    `http://127.0.0.1:5000/categories/getbycategory/${page}/`,
+    `https://tienda-online-backend.herokuapp.com/categories/getbycategory/${page}/`,
     requestOptions
   )
     .then(response => response.json())
@@ -257,7 +257,10 @@ const bringProductsSearch = (search, category, order, discount, page = 1) => {
     redirect: "follow"
   };
 
-  fetch(`http://127.0.0.1:5000/search/${page}/`, requestOptions)
+  fetch(
+    `https://tienda-online-backend.herokuapp.com/search/${page}/`,
+    requestOptions
+  )
     .then(response => response.json())
     .then(result => {
       renderCards([...result.products]);

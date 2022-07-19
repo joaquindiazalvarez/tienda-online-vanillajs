@@ -152,7 +152,7 @@ const mountPageSelector = pages => {
     let page = i + 1;
     let newPill = document.createElement("li");
     newPill.setAttribute("class", "nav-item");
-    newPill.innerHTML = `<button class="btn btn-primary">${page.toString()}</button>`;
+    newPill.innerHTML = `<button class="btn btn-primary pill">${page.toString()}</button>`;
     newPill.addEventListener("click", function(e) {
       var checked = document.querySelector("#check").checked;
       let categoryPressed = document.getElementById("categoryPressed")
@@ -219,7 +219,7 @@ const bringProductsByCategory = (category, order, discount, page = 1) => {
   };
 
   fetch(
-    `https://tienda-online-backend.herokuapp.com/categories/getbycategory/${page}/`,
+    `https://backend-tienda-online.herokuapp.com/categories/getbycategory/${page}/`,
     requestOptions
   )
     .then(response => response.json())
@@ -258,7 +258,7 @@ const bringProductsSearch = (search, category, order, discount, page = 1) => {
   };
 
   fetch(
-    `https://tienda-online-backend.herokuapp.com/search/${page}/`,
+    `https://backend-tienda-online.herokuapp.com/search/${page}/`,
     requestOptions
   )
     .then(response => response.json())

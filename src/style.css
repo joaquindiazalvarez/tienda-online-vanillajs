@@ -1,4 +1,10 @@
 body,
+html,
+body {
+  overflow-x: hidden;
+  /* evita que la página sea más ancha que la ventana */
+}
+
 html {
   color: black;
   background-color: rgb(230, 230, 230);
@@ -56,12 +62,40 @@ nav div h4 {
 #card {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 143px;
-  padding-right: 143px;
+  padding-left: 335px;
+  padding-right: 335px;
   justify-content: left;
   align-items: center;
   /* los productos listados estan justificados
   a la izquierda y fluyen en varias lineas */
+}
+@media (max-width: 1536px) {
+  #card {
+    padding-left: 143px;
+    padding-right: 143px;
+    /* padding para pantallas con ancho menor a 1536 */
+  }
+}
+@media (max-width: 1400px) {
+  #card {
+    padding-left: 84px;
+    padding-right: 84px;
+    /* padding para pantallas con ancho menor a 1400 */
+  }
+}
+@media (max-width: 1280px) {
+  #card {
+    padding-left: 24px;
+    padding-right: 24px;
+    /* padding para pantallas con ancho menor a 1280 */
+  }
+}
+@media (max-width: 1024px) {
+  #card {
+    padding-left: 50px;
+    padding-right: 50px;
+    /* padding para pantallas con ancho menor a 1024 */
+  }
 }
 #card .card {
   display: flex;

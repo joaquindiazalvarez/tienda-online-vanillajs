@@ -1896,7 +1896,7 @@ module.exports = {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  background-color: black;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  color: black;\r\n  background-color: rgb(230, 230, 230);\r\n  text-align: center;\r\n  margin: 0;\r\n  padding: 0;\r\n  font: Helvetica;\r\n}\r\nbody:first-child {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.navbar {\r\n  background-color: rgb(230, 230, 230);\r\n}\r\n\r\nh4 {\r\n  margin-bottom: 0px;\r\n}\r\n\r\n#header {\r\n  padding: 1em;\r\n  background-color: #222;\r\n  color: white;\r\n  text-align: center;\r\n}\r\n\r\n#header h1 {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n#header p {\r\n  color: white;\r\n}\r\n\r\n[data-component=\"app\"] {\r\n  padding: 1em;\r\n  background: rgb(140, 140, 140);\r\n  min-height: 10em;\r\n  color: #222;\r\n}\r\n#app ~ div,\r\n#app ~ ul {\r\n  background-color: rgb(230, 230, 230);\r\n}\r\n\r\n#categoryName {\r\n  font-family: \"Helvetica\";\r\n}\r\n.btnCategory {\r\n  font-weight: bold;\r\n}\r\n\r\n.card-img-top {\r\n  height: 230px;\r\n  width: auto;\r\n  border-radius: 10px;\r\n}\r\n#cardWrapper {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n#card {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  padding-left: 143px;\r\n  padding-right: 143px;\r\n  justify-content: left;\r\n  align-items: center;\r\n}\r\n#card .card {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin: 10px;\r\n  border-radius: 10px;\r\n  border: 1px solid;\r\n  padding: 40px;\r\n  height: 450px;\r\n}\r\n\r\n.shop {\r\n  margin-top: auto;\r\n}\r\n.labeled {\r\n  text-decoration: line-through;\r\n}\r\n.btnCategory {\r\n  border: 2px solid #000000;\r\n  border-radius: 20px;\r\n  background: rgb(255, 255, 255);\r\n  color: black;\r\n  box-shadow: 1px 1px 5px 1px rgb(255, 255, 255);\r\n}\r\n#message {\r\n  font-weight: bold;\r\n  margin: 100px;\r\n}\r\nul {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  list-style: none;\r\n}\r\nli {\r\n  margin: 3px;\r\n}\r\np {\r\n  margin: 5px;\r\n}\r\n.form-check {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n.form-check-input {\r\n  padding-top: 9px;\r\n}\r\n.pill {\r\n  background: gray;\r\n  border: black 1px solid;\r\n}\r\n", ""]);
+exports.push([module.i, "body,\r\nhtml {\r\n  color: black;\r\n  background-color: rgb(230, 230, 230);\r\n  text-align: center;\r\n  margin: 0;\r\n  padding: 0;\r\n  font: Helvetica;\r\n  /* estilos generales para la página */\r\n}\r\n\r\nbody:first-child {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  /* el div principal está centrado */\r\n}\r\n\r\nnav div h4 {\r\n  margin-bottom: 0px;\r\n  /* \"tienda online\" no tiene margen inferior */\r\n}\r\n\r\n[data-component=\"app\"] {\r\n  padding: 1em;\r\n  background: rgb(140, 140, 140);\r\n  min-height: 10em;\r\n  color: #222;\r\n  /* selecciona el elemento que tiene como\r\n  atributo data-component=\"app\"\r\n  y lo estiliza */\r\n}\r\n#app ~ div,\r\n#app ~ ul {\r\n  background-color: rgb(230, 230, 230);\r\n  /* lo que venga despues del elemento de \r\n  id=\"app\", tendrá fondo blanco */\r\n}\r\n\r\n#categoryName {\r\n  font-family: \"Helvetica\";\r\n  /* el título de la app se estiliza */\r\n}\r\n.btnCategory {\r\n  font-weight: bold;\r\n  /* los botones de categoría se estilizan */\r\n}\r\n\r\n.card-img-top {\r\n  height: 230px;\r\n  width: auto;\r\n  border-radius: 10px;\r\n  /* las imagenes dentro de las \r\n  cards se estilizan */\r\n}\r\n#card {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  padding-left: 143px;\r\n  padding-right: 143px;\r\n  justify-content: left;\r\n  align-items: center;\r\n  /* los productos listados estan justificados\r\n  a la izquierda y fluyen en varias lineas */\r\n}\r\n#card .card {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin: 10px;\r\n  border-radius: 10px;\r\n  border: 1px solid;\r\n  padding: 40px;\r\n  height: 450px;\r\n  /* especificaciones para cada card */\r\n}\r\n.labeled {\r\n  text-decoration: line-through;\r\n  /* tacha los precios con descuento */\r\n}\r\n.btnCategory {\r\n  border: 2px solid #000000;\r\n  border-radius: 20px;\r\n  background: rgb(255, 255, 255);\r\n  color: black;\r\n  box-shadow: 1px 1px 5px 1px rgb(255, 255, 255);\r\n  /* estilos para los botones de categoría */\r\n}\r\n#message {\r\n  font-weight: bold;\r\n  margin: 100px;\r\n  /* estilo para el mensaje de búsqueda que \r\n  no arroja resultados */\r\n}\r\nul {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  list-style: none;\r\n  /* estilos para el selector de páginas */\r\n}\r\n.pill {\r\n  background: gray;\r\n  border: black 1px solid;\r\n  /* estilos para el selector de páginas */\r\n}\r\nli {\r\n  margin: 3px;\r\n  /* estilos para el selector de páginas */\r\n}\r\np {\r\n  margin: 5px;\r\n  /* estilos para el paragraph dentro de las cards */\r\n}\r\n.form-check {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  /* estilos para el checkbox */\r\n}\r\n.form-check-input {\r\n  padding-top: 9px;\r\n  /* estilos para el checkbox */\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -10967,8 +10967,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _views_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/index.js */ "./src/views/index.js");
 
-/**
- * The entry point
+/*
+este archivo es el padre de los demás.
+renderiza el titulo de la app(#app que contiene los botones por categooría) 
+en la primera carga de la página
+también ejecuta las funciones search, selectCategory, selectOrder 
+y chackDiscount, que habilitan los distintos elementos HTML
+de la página(como barra buscadores, selector, checkbox), para
+que puedan utilizarse
+
  */
 
 
@@ -10978,10 +10985,10 @@ window.addEventListener("load", function () {
   Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["selectCategory"])();
   Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["selectOrder"])();
   Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["checkDiscount"])();
-  var app = new _views_index_js__WEBPACK_IMPORTED_MODULE_1__["default"](document.getElementById("app")); // A very simple component setup
+  var app = new _views_index_js__WEBPACK_IMPORTED_MODULE_1__["default"](document.getElementById("app"));
+  app.render(); //renderiza el título de la página(#app, que contiene los botones por categoría)
 
-  app.render();
-  Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["bringAllProducts"])();
+  Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["bringAllProducts"])(); //trae todos los productos al iniciar la página
 });
 
 /***/ }),
@@ -10998,6 +11005,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Card; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderCards", function() { return renderCards; });
 
+/* 
+este archivo contiene la clase card, que es el componente
+que muestra el producto en sí
+además, este archivo exporta el método que renderiza
+todos los productos dado el arreglo traído por fetch 
+*/
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -11006,6 +11019,13 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 var Card = /*#__PURE__*/function () {
+  /* 
+  clase que se inicializa con todos los datos de un producto
+  y los puede renderizar en un elemento card de bootstrap 
+  initialization: elem, id, name, url_image, price, discount
+    elem es el nodo en el cual se renderizará la carta
+  functions: render
+  */
   function Card(elem, id, name, url_image, price, discount) {
     _classCallCheck(this, Card);
 
@@ -11021,7 +11041,8 @@ var Card = /*#__PURE__*/function () {
   _createClass(Card, [{
     key: "render",
     value: function render() {
-      if (this.elem) this.elem.innerHTML = "\n        <div class=\"card\" style=\"width: 18rem;\">\n            <img src=\"".concat(this.url_image, "\" class=\"card-img-top\">\n            <div class=\"card-body d-flex flex-column\">\n                <h5 class=\"card-title\">").concat(this.name, "</h5>\n                <p class=\"card-text ").concat(this.discount > 0 ? "labeled" : "", "\">$").concat(this.price, "</p>\n                ").concat(this.discount > 0 ? '<h4 class="card-title-labeled">$' + Math.floor((this.price * (100 - this.discount)).toString() / 100) + "</h4>" : "", "\n                <a href=\"#\" class=\"btn btn-primary mt-auto\">Agregar <i class=\"fas fa-shopping-cart\" aria-hidden=\"true\"></i>\n                </a>\n            </div>\n        </div>\n        ");
+      //renderiza una carta con los elementos o variables del producto
+      if (this.elem) this.elem.innerHTML = "\n        <div class=\"card\" style=\"width: 18rem;\">\n            <img src=\"".concat(this.url_image, "\" class=\"card-img-top\">\n            <div class=\"card-body d-flex flex-column\">\n                <h5 class=\"card-title\">").concat(this.name, "</h5>\n                <p class=\"card-text ").concat(this.discount > 0 ? "labeled" : "", "\">$").concat(this.price, "</p>\n                <!--si el producto tiene descuento se tacha el precio original(se le agrega una clase)-->\n                ").concat(this.discount > 0 ? '<h4 class="card-title-labeled">$' + Math.floor((this.price * (100 - this.discount)).toString() / 100) + "</h4>" : "", "\n                <!--si el producto tiene descuento se calcula el precio con el descuento aplicado y se muestra-->\n                <a href=\"#\" class=\"btn btn-primary mt-auto\">Agregar <i class=\"fas fa-shopping-cart\" aria-hidden=\"true\"></i>\n                </a>\n            </div>\n        </div>\n        ");
     }
   }]);
 
@@ -11030,12 +11051,22 @@ var Card = /*#__PURE__*/function () {
 
 
 var renderCards = function renderCards(products) {
-  var objectsArray = [];
+  /* 
+  Función que renderiza las cartas dado un arreglo de productos
+  args: arreglo de productos
+  returns: no returns
+  */
+  var objectsArray = []; //se crea un arreglo donde iran los objetos de la clase Card
+  //para luegorenderizarlos
+
   var parent = document.getElementById("card");
-  parent.innerHTML = "";
+  parent.innerHTML = ""; //se resetea el div con id = card
+
   products.forEach(function (element, i) {
     var child = document.createElement("div");
-    parent.appendChild(child);
+    parent.appendChild(child); //se crea un nodo, el cual se pasará como argumento para la clase objeto Card
+    //es decir, la carta se renderiza en este div
+
     objectsArray.push(new Card(child, element.id, element.name, element.url_image, element.price, element.discount));
     objectsArray[i].render();
   });
@@ -11089,6 +11120,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bringAllProducts", function() { return bringAllProducts; });
 /* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/card */ "./src/components/card.js");
 
+/* eslint-disable */
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -11109,32 +11141,22 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
-var productState;
-/* var productState = [
-  {id: 8, name: 'PISCO ALTO DEL CARMEN 35º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/alto8532.jpg', price: 7990.0, discount: 10, category: 2}, 
-  {id: 9, name: 'PISCO ALTO DEL CARMEN 40º ', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/alto408581.jpg', price: 5990.0, 'discount': 0, category: 2}, 
-  {id: 10, name: 'PISCO ARTESANOS 35º ', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/artesanos8818.jpg', price: 3990.0, 'discount': 0, category: 2}, 
-  {id: 11, name: 'PISCO BAUZA 40º ', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/bauza408831.jpg', price: 4990.0, 'discount': 0, category: 2}, 
-  {id: 12, name: 'PISCO CAMPANARIO 35º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/campanario8845.jpg', price: 2990.0, 'discount': 20, category: 2}, 
-  {id: 13, name: 'PISCO CAMPANARIO 40º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/campanario408881.jpg', price: 3990.0, 'discount': 20, category: 2}, 
-  {id: 14, name: 'PISCO ESPIRITU DEL ELQUI 40º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/espiritu8936.jpg', price: 5990.0, 'discount': 20, category: 2}, 
-  {id: 15, name: 'PISCO ESPIRITU DEL ELQUI 45º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/espiritu8957.jpg', price: 6990.0, 'discount': 5, category: 2}, 
-  {id: 16, name: 'PISCO HORCON QUEMADO 35º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/horcon359049.jpg', price: 6990.0, 'discount': 20, category: 2}, 
-  {id: 17, name: 'PISCO HORCON QUEMADO 40º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/horcon409062.jpg', price: 7990.0, 'discount': 20, category: 2}, 
-  {id: 18, name: 'PISCO HORCON QUEMADO 46º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/horcon469075.jpg', price: 8990.0, 'discount': 20, category: 2}, 
-  {id: 19, name: 'PISCO MISTRAL 35º',url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/mistral359200.jpg', price: 4990.0, 'discount': 20, category: 2}, 
-  {id: 20, name: 'PISCO MISTRAL 40º ', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/mistral409215.jpg', price: 4990.0, 'discount': 20, category: 2}, 
-  {id: 21, name: 'PISCO TRES ERRES 35º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/rrr359305.jpg', price: 4590.0, 'discount': 20, category: 2}, 
-  {id: 22, name: 'PISCO TRES ERRES 40º', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/rrr409319.jpg', price: 4990.0, 'discount': 20, category: 2}, 
-  {id: 87, name: 'PISCO MISTRAL 35°', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/358978.jpg', price: 4990.0, 'discount': 0, category: 2}, 
-  {id: 88, name: 'PISCO MISTRAL GRAN NOBEL 40°', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/grannobel9104.jpg', price: 19900.0, 'discount': 0, category: 2}, 
-  {id: 89, name: 'PISCO MISTRAL 40°', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/409346.jpg', price: 4990.0, 'discount': 0, category: 2}, 
-  {id: 90, name: 'PISCO MISTRAL 46°', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/469463.jpg', price: 7890.0, 'discount': 0, category: 2}, 
-  {id: 91, name: 'PISCO MISTRAL NOBEL 40°', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/nobel409551.jpg', price: 19990.0, 'discount': 0, category: 2}, 
-  {id: 92, name: 'PISCO MISTRAL NOBEL 46', url_image: 'https://dojiw2m9tvv09.cloudfront.net/11132/product/nobelanejado9639.jpg', price: 15990.0, 'discount': 15, category: 2}
-]; */
+/* 
+este archivo es el que contiene la mayoría de las funciones
+-importa el método para renderizar cards
+-contiene la clas App, que renderiza el título de la página
+  y los botones por categoría
+-contiene las funciones que habilitan los elementos Html
+  como inputs y selectors
+-contiene los fetchs que traen los productos de la db 
+
+- tiene dos fetch: 
+  bringProductsSearch() se ejecuta cuando se busca en la barra buscadora
+  bringProductsByCategory() se ejecuta cuando se presiona un boton de categoría
+*/
 
 var map = {
+  TODOS: "todos",
   "BEBIDAS ENERGÉTICAS": "bebida energetica",
   PISCOS: "pisco",
   RON: "ron",
@@ -11143,9 +11165,16 @@ var map = {
   CERVEZAS: "cerveza",
   VODKAS: "vodka",
   "TODOS LOS PRODUCTOS": "todos"
-}; //var productState = [];
+}; //objeto que traduce los strings de categorías, para que los entienda el backend
 
 var App = /*#__PURE__*/function () {
+  /* 
+  clase que recibe un nodo y renderiza el título de la app 
+  y los botones por categoría 
+  initialization: elem -> nodo padre
+  functions: render -> renderiza el título y los botones por categoria
+    que al clickearlo traen los productos de la categoría presionada
+  */
   function App(elem) {
     _classCallCheck(this, App);
 
@@ -11157,6 +11186,7 @@ var App = /*#__PURE__*/function () {
     key: "render",
     value: function render() {
       if (this.elem) this.elem.innerHTML = "\n        <section data-component=\"app\">\n        <h1 id=\"categoryName\"><b><i id=\"categoryPressed\">TODOS LOS PRODUCTOS</i></b></h1>  \n        <div class=\"container\">\n          <div id=\"categoryButtons\">      \n          </div>            \n        </div>\n        </section>\n        ";
+      addButton("TODOS");
       addButton("BEBIDAS ENERGÉTICAS");
       addButton("PISCOS");
       addButton("RON");
@@ -11173,84 +11203,133 @@ var App = /*#__PURE__*/function () {
 
 
 var changeTitle = function changeTitle(category) {
+  /* 
+  Función que cambia el título de la app 
+  args: category -> nombre que llevará el título
+  returns: no returns
+  */
   var categoryNames = document.getElementById("categoryName");
   categoryNames.innerHTML = "<b><i id=\"categoryPressed\">".concat(category, "</i></b>");
 };
 
 var selectCategory = function selectCategory() {
-  var select = document.querySelector("#categorySelector");
-  select.addEventListener("change", function (e) {
-    var checked = document.querySelector("#check").checked;
+  /*
+  Función que agrega un evento al selector de categoría de la búsqueda
+  El evento renderiza los productos cada vez que cambia la opción del selector
+  args: no args
+  return: no return
+  */
+  var parent = document.getElementById("categorySelector");
+  parent.addEventListener("change", function (e) {
+    var checked = document.getElementById("check").checked;
     var inputValue = document.getElementById("searchInput").value;
-    var categorySelected = document.querySelector("#categorySelector").value;
-    var orderSelectedValue = document.getElementById("orderSelector").value;
+    var categorySelected = document.getElementById("categorySelector").value;
+    var orderSelectedValue = document.getElementById("orderSelector").value; //se traen todos los valores que son argumentos para la búsqueda
+    //son los valores que tienen los elementos HTML
+    //checkbox, barra de búsqueda, categoría seleccionada y orden
+
     bringProductsSearch(inputValue, categorySelected, orderSelectedValue, checked);
   });
 };
 var search = function search() {
-  var input = document.getElementById("searchInput");
-  input.addEventListener("keyup", function (e) {
-    var checked = document.querySelector("#check").checked;
-    var categorySelected = document.querySelector("#categorySelector").value;
-    var orderSelectedValue = document.getElementById("orderSelector").value;
-    bringProductsSearch(e.target.value, categorySelected, orderSelectedValue, checked);
+  /* 
+  Función que agrega un evento al input de barra de búsqueda
+  renderiza los productos cada vez que se ingresa o se quita un caracter
+  args: no args
+  return: no return
+  */
+  var parent = document.getElementById("searchInput");
+  parent.addEventListener("keyup", function (e) {
+    var checked = document.getElementById("check").checked;
+    var categorySelected = document.getElementById("categorySelector").value;
+    var orderSelectedValue = document.getElementById("orderSelector").value; //se traen los valores de los elementos HTML que son argumentos para la búsqueda
+
+    bringProductsSearch(e.target.value, categorySelected, orderSelectedValue, checked //se busca lo ingresado en el input (e.target.value) de la barra buscadora
+    );
     changeTitle("BÚSQUEDA");
   });
 };
 var selectOrder = function selectOrder() {
+  /*
+  Función que agrega un evento al selector de orden
+  renderiza los productos cada vez que se cambia el orden
+  args: no args
+  return: no return
+  */
   var parent = document.getElementById("orderSelector");
   parent.addEventListener("change", function (e) {
-    var checked = document.querySelector("#check").checked;
+    var checked = document.getElementById("check").checked;
     var orderSelectedValue = document.getElementById("orderSelector").value;
-    var categoryPressed = document.getElementById("categoryPressed").innerHTML;
+    var categoryPressed = document.getElementById("categoryPressed").innerHTML; //se traen los valores de los elementos HTML que son argumentos para la búsqueda
 
     if (categoryPressed === "BÚSQUEDA") {
+      //si se está buscando, se ejecuta la función de fetch de búsqueda
       var inputValue = document.getElementById("searchInput").value;
       var categorySelected = document.querySelector("#categorySelector").value;
       bringProductsSearch(inputValue, categorySelected, orderSelectedValue, checked);
-    } else bringProductsByCategory(map[categoryPressed], orderSelectedValue, checked);
+    } //si no se está buscando, se ejecuta la función de fetch de elementos por categoría
+    else bringProductsByCategory(map[categoryPressed], orderSelectedValue, checked);
   });
 };
 var checkDiscount = function checkDiscount() {
+  /*
+  Función que agrega un evento al checkbox de descuento
+  renderiza los productos cada vez que se presiona el checkbox
+  args: no args
+  return: no return
+   */
   var parent = document.getElementById("check");
   parent.addEventListener("change", function (e) {
     console.log("prueba");
-    var checked = document.querySelector("#check").checked;
+    var checked = document.getElementById("check").checked;
     var orderSelectedValue = document.getElementById("orderSelector").value;
-    var categoryPressed = document.getElementById("categoryPressed").innerHTML;
+    var categoryPressed = document.getElementById("categoryPressed").innerHTML; //se traen los valores de los elementos HTML que son argumentos para la búsqueda
 
     if (categoryPressed === "BÚSQUEDA") {
+      //si se está buscando, se ejecuta la función de fetch de búsqueda
       var inputValue = document.getElementById("searchInput").value;
-      var categorySelected = document.querySelector("#categorySelector").value;
+      var categorySelected = document.getElementById("categorySelector").value;
       bringProductsSearch(inputValue, categorySelected, orderSelectedValue, checked);
-    } else bringProductsByCategory(map[categoryPressed], orderSelectedValue, checked);
+    } //si no se está buscando, se ejecuta la función de fetch de traer productos por categoría
+    else bringProductsByCategory(map[categoryPressed], orderSelectedValue, checked);
   });
 };
 
 var mountPageSelector = function mountPageSelector(pages) {
+  /*
+  Función que agrega botones de navegación de página
+  para las búsquedas que tienen más de una página.
+  renderiza las páginas cuando se clickean los botones
+  args: pages -> número de páginas
+  return: no return 
+  */
   var parent = document.getElementById("pageSelector");
-  parent.innerHTML = "";
+  parent.innerHTML = ""; //se borran los selectores de páginas anteriores
 
   var _loop = function _loop(i) {
+    //se itera tantas veces como número de páginas hayan
     var page = i + 1;
     var newPill = document.createElement("li");
     newPill.setAttribute("class", "nav-item");
-    newPill.innerHTML = "<button class=\"btn btn-primary pill\">".concat(page.toString(), "</button>");
+    newPill.innerHTML = "<button class=\"btn btn-primary pill\">".concat(page.toString(), "</button>"); //se crea un botón nuevo
+
     newPill.addEventListener("click", function (e) {
-      var checked = document.querySelector("#check").checked;
+      var checked = document.getElementById("check").checked;
       var categoryPressed = document.getElementById("categoryPressed").innerHTML;
-      var orderSelectedValue = document.getElementById("orderSelector").value;
+      var orderSelectedValue = document.getElementById("orderSelector").value; //se traen los elementos HTML que son argumentos para la búsqueda
 
       if (categoryPressed === "BÚSQUEDA") {
+        //si se está buscando, se ejecuta la función fetch de búsqueda
         var inputValue = document.getElementById("searchInput").value;
-        var categorySelected = document.querySelector("#categorySelector").value;
+        var categorySelected = document.getElementById("categorySelector").value;
         bringProductsSearch(inputValue, categorySelected, orderSelectedValue, checked, page);
       } else {
+        //si no se está buscando se traen elementos por categoría
         var _categoryPressed = document.getElementById("categoryPressed").innerHTML;
         bringProductsByCategory(map[_categoryPressed], orderSelectedValue, checked, page);
       }
     });
-    parent.appendChild(newPill);
+    parent.appendChild(newPill); //se van renderizando los selectores de página
   };
 
   for (var i = 0; i < pages; i++) {
@@ -11259,23 +11338,44 @@ var mountPageSelector = function mountPageSelector(pages) {
 };
 
 var addButton = function addButton(category) {
+  /*
+  Función que renderiza los botones de categoría
+  que van bajo el título de la página
+  args: category -> este argumento es pasado en el render de App
+    le da un nombre al botón
+  returns: no return
+  */
   var newButton = document.createElement("button");
   newButton.setAttribute("id", category);
   newButton.setAttribute("value", category);
   newButton.className = "btn btnCategory btn-light";
-  newButton.innerHTML = category;
+  newButton.innerHTML = category; //se crea un nuevo botón
+
   newButton.addEventListener("click", function (e) {
-    changeTitle(e.target.value);
-    var checked = document.querySelector("#check").checked;
+    changeTitle(e.target.value); //se cambia el título de la app
+
+    var checked = document.getElementById("check").checked;
     var orderSelectorValue = document.getElementById("orderSelector").value;
     bringProductsByCategory(map[e.target.value], orderSelectorValue, checked);
   });
   var categoryButtons = document.getElementById("categoryButtons");
-  categoryButtons.appendChild(newButton);
+  categoryButtons.appendChild(newButton); //se renderizan los botones
 };
 
 var bringProductsByCategory = function bringProductsByCategory(category, order, discount) {
   var page = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+
+  /*
+  Esta función renderiza productos cuando se clickea un botón de categoría.
+  contiene un fetch a la API backend-tienda-online.
+  recibe argumentos y los pasa como JSON y también el número de página se agrega a la url.
+  recibe los productos y con el resultado realiza lo siguiente:
+    -renderiza productos
+    -borra el selector de página existente y lo reemplaza por otro, si es que
+      la búsqueda tiene más de una página
+  args: category, order, discount, page
+  returns: no return
+  */
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
@@ -11294,9 +11394,10 @@ var bringProductsByCategory = function bringProductsByCategory(category, order, 
   }).then(function (result) {
     Object(_components_card__WEBPACK_IMPORTED_MODULE_0__["renderCards"])(_toConsumableArray(result.products));
     var parent = document.getElementById("pageSelector");
-    parent.innerHTML = "";
+    parent.innerHTML = ""; //se borra el selector de página anterior
 
     if (result.pages > 1) {
+      //si el número de páginas es mayor a uno se renderiza un selector de página
       mountPageSelector(result.pages);
 
       var _parent = document.getElementById("pageSelector");
@@ -11313,6 +11414,19 @@ var bringProductsByCategory = function bringProductsByCategory(category, order, 
 
 var bringProductsSearch = function bringProductsSearch(search, category, order, discount) {
   var page = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+
+  /*
+  Esta función realiza una búsqueda que consiste en mostrar los productos
+    que contengan el string que se está tipeando en el nommbre.
+  contiene un fetch a la API backend-tienda-online.
+  recibe argumentos y los pasa como JSON y también el número de página se agrega a la url.
+  recibe los productos y con el resultado realiza lo siguiente:
+    -renderiza productos
+    -borra el selector de página existente y lo reemplaza por otro, si es que
+      la búsqueda tiene más de una página
+  args: category, order, discount, page
+  returns: no return
+  */
   console.log(order);
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
@@ -11334,6 +11448,8 @@ var bringProductsSearch = function bringProductsSearch(search, category, order, 
     Object(_components_card__WEBPACK_IMPORTED_MODULE_0__["renderCards"])(_toConsumableArray(result.products));
 
     if (result.products.length === 0) {
+      // si la búsqueda no arroja resultados, se
+      //renderiza un h1 que indica que no han habido resultados
       var content = document.getElementById("card");
       var message = document.createElement("h1");
       message.setAttribute("id", "message");
@@ -11342,9 +11458,10 @@ var bringProductsSearch = function bringProductsSearch(search, category, order, 
     }
 
     var parent = document.getElementById("pageSelector");
-    parent.innerHTML = "";
+    parent.innerHTML = ""; //se borra el selector de página anterior
 
     if (result.pages > 1) {
+      //si la búsqueda tiene más de una página, se renderiza un selector de página
       mountPageSelector(result.pages);
 
       var _parent2 = document.getElementById("pageSelector");
@@ -11360,17 +11477,11 @@ var bringProductsSearch = function bringProductsSearch(search, category, order, 
 };
 
 var bringAllProducts = function bringAllProducts() {
-  var requestOptions = {
-    method: "GET",
-    redirect: "follow"
-  };
-  fetch("https://backend-tienda-online.herokuapp.com/getall", requestOptions).then(function (response) {
-    return response.json();
-  }).then(function (result) {
-    Object(_components_card__WEBPACK_IMPORTED_MODULE_0__["renderCards"])(_toConsumableArray(result.products));
-  })["catch"](function (error) {
-    return console.log("error", error);
-  });
+  /*
+  Función que se exporta a app.js para que se renderizen
+    todos los productos en la primera carga de la página
+  */
+  bringProductsByCategory("todos", "az", false, 1);
 };
 
 /***/ }),

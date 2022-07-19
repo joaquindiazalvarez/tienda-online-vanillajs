@@ -1,16 +1,3 @@
-/* @font-face {
-  font-family: "LTEnergy-Bolditalic";
-  src: url('./fonts/LTEnergy-BoldItalic.ttf') format('truetype');
-}  */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: black;
-}
-
 body,
 html {
   color: black;
@@ -19,30 +6,19 @@ html {
   margin: 0;
   padding: 0;
   font: Helvetica;
+  /* estilos generales para la página */
 }
 
-.navbar {
-  background-color: rgb(230, 230, 230);
+body:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* el div principal está centrado */
 }
 
-h4 {
+nav div h4 {
   margin-bottom: 0px;
-}
-
-#header {
-  padding: 1em;
-  background-color: #222;
-  color: white;
-  text-align: center;
-}
-
-#header h1 {
-  margin: 0;
-  padding: 0;
-}
-
-#header p {
-  color: white;
+  /* "tienda online" no tiene margen inferior */
 }
 
 [data-component="app"] {
@@ -50,50 +26,56 @@ h4 {
   background: rgb(140, 140, 140);
   min-height: 10em;
   color: #222;
+  /* selecciona el elemento que tiene como
+  atributo data-component="app"
+  y lo estiliza */
 }
 #app ~ div,
 #app ~ ul {
   background-color: rgb(230, 230, 230);
+  /* lo que venga despues del elemento de 
+  id="app", tendrá fondo blanco */
 }
 
 #categoryName {
   font-family: "Helvetica";
+  /* el título de la app se estiliza */
 }
 .btnCategory {
   font-weight: bold;
+  /* los botones de categoría se estilizan */
 }
-.card {
-  height: 450px;
-}
-img {
-  height: auto;
-}
+
 .card-img-top {
-  height: 280px;
+  height: 230px;
+  width: auto;
+  border-radius: 10px;
+  /* las imagenes dentro de las 
+  cards se estilizan */
 }
 #card {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 100px;
-  padding-right: 100px;
-  justify-content: center;
+  padding-left: 143px;
+  padding-right: 143px;
+  justify-content: left;
   align-items: center;
+  /* los productos listados estan justificados
+  a la izquierda y fluyen en varias lineas */
 }
 #card .card {
+  display: flex;
+  flex-direction: column;
   margin: 10px;
-  /* min-width: 309px; */
   border-radius: 10px;
   border: 1px solid;
   padding: 40px;
-}
-.card-img-top {
-  border-radius: 10px;
-}
-.card-title {
-  height: 50px;
+  height: 450px;
+  /* especificaciones para cada card */
 }
 .labeled {
   text-decoration: line-through;
+  /* tacha los precios con descuento */
 }
 .btnCategory {
   border: 2px solid #000000;
@@ -101,32 +83,41 @@ img {
   background: rgb(255, 255, 255);
   color: black;
   box-shadow: 1px 1px 5px 1px rgb(255, 255, 255);
+  /* estilos para los botones de categoría */
 }
 #message {
   font-weight: bold;
   margin: 100px;
+  /* estilo para el mensaje de búsqueda que 
+  no arroja resultados */
 }
 ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
+  /* estilos para el selector de páginas */
+}
+.pill {
+  background: gray;
+  border: black 1px solid;
+  /* estilos para el selector de páginas */
 }
 li {
   margin: 3px;
+  /* estilos para el selector de páginas */
 }
 p {
   margin: 5px;
+  /* estilos para el paragraph dentro de las cards */
 }
 .form-check {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* estilos para el checkbox */
 }
 .form-check-input {
   padding-top: 9px;
-}
-.pill {
-  background: gray;
-  border: black 1px solid;
+  /* estilos para el checkbox */
 }

@@ -1,6 +1,13 @@
 "use strict";
-/**
- * The entry point
+/*
+este archivo es el padre de los demás.
+renderiza el titulo de la app(#app que contiene los botones por categooría) 
+en la primera carga de la página
+también ejecuta las funciones search, selectCategory, selectOrder 
+y chackDiscount, que habilitan los distintos elementos HTML
+de la página(como barra buscadores, selector, checkbox), para
+que puedan utilizarse
+
  */
 import * as css from "./style.css";
 import App, {
@@ -16,10 +23,11 @@ window.addEventListener("load", () => {
   selectCategory();
   selectOrder();
   checkDiscount();
-  const app = new App(document.getElementById("app"));
 
-  // A very simple component setup
+  const app = new App(document.getElementById("app"));
   app.render();
+  //renderiza el título de la página(#app, que contiene los botones por categoría)
 
   bringAllProducts();
+  //trae todos los productos al iniciar la página
 });

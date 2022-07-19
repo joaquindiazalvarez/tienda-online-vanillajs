@@ -66,7 +66,7 @@ Esta APP está hecha con HTML, CSS y JavaScript Puro(Vanilla JS)
 ## JavaScript:
 Está hecho en tres archivos, usando la lógica de vistas y componentes.
 
-Tenemos un archivo Padre, que es el app.js, donde está la función load que renderiza todo lo que debe pintarse cuando carga la página que viene importado del index.js
+Tenemos un archivo Padre, que es el app.js, donde está la función load que renderiza todo lo que debe pintarse cuando carga la página.
 
 Tenemos una vista llamada index.js, donde ocurre la mayoría de la lógica del programa. Aquí van los fetchs, y las funciones que habilitan los componentes HTML como el input de búsqueda, el selector de categoría, los botones, el checkboz de descuento, el orden y la paginación. También se define la clase App que es la que contiene el título de la aplicación y los botones de categoría. además importa la función para renderizar las cartas del archivo card.js.  
 

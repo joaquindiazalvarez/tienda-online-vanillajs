@@ -42,7 +42,7 @@ La segunda opción es clickear uno de los botones de categoría:
 
 ![selector](https://imagizer.imageshack.com/img924/9897/VxnjpM.png)  
 
-Al presionar la categoría se mostrarán todos plos producto de dicha categoría  
+Al presionar la categoría se mostrarán todos los producto de dicha categoría  
 
 no importando la opción que hayas elegido, la aplicación tiene un checkbox de desccuento que si se presiona, muestra solo los productos con descuento.  
 también posee un selector de orden, dentro del cual tenemos las opciones:

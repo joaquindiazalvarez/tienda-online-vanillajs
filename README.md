@@ -7,7 +7,7 @@
   [pincha aquí para ir al repositorio del backend](https://github.com/joaquindiazalvarez/tienda-online-backend-flask-mysql)  
   
 ## Descripción...
-  Básicammente es una tienda Online, que tiene un buscador de productos  
+  Básicamente es una tienda Online, que tiene un buscador de productos  
   También tiene un selector de productos por categoría(botones):  
   
   ![selector](https://imagizer.imageshack.com/img924/9897/VxnjpM.png) 

@@ -109,7 +109,18 @@ nav div h4 {
 }
 .labeled {
   text-decoration: line-through;
+  margin: 0px;
   /* tacha los precios con descuento */
+}
+.card-title {
+  margin: 0px;
+
+  /* margen para el nombre del producto */
+}
+.card-text {
+  margin: 0px;
+  font-weight: bold;
+  /* margen para el precio del producto */
 }
 .btnCategory {
   border: 2px solid #000000;

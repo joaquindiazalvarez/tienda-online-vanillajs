@@ -29,25 +29,25 @@ export default class Card {
     //renderiza una carta con los elementos o variables del producto
     if (this.elem)
       this.elem.innerHTML = `
-        <div class="card" style="width: 18rem;">
+        <div class="card pb-3" style="width: 18rem;">
             <img src="${this.url_image}" class="card-img-top">
             <div class="card-body d-flex flex-column">
-                <h5 class="card-title">${this.name}</h5>
+                <h5 class="card-title mb-auto">${this.name}</h5>
                 <p class="card-text ${this.discount > 0 ? "labeled" : ""}">$${
         this.price
       }</p>
                 <!--si el producto tiene descuento se tacha el precio original(se le agrega una clase)-->
                 ${
                   this.discount > 0
-                    ? '<h4 class="card-title-labeled">$' +
+                    ? '<p class="card-text mb-0">$' +
                       Math.floor(
                         (this.price * (100 - this.discount)).toString() / 100
                       ) +
-                      "</h4>"
+                      "</p>"
                     : ""
                 }
                 <!--si el producto tiene descuento se calcula el precio con el descuento aplicado y se muestra-->
-                <a href="#" class="btn btn-primary mt-auto">Agregar <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                <a href="#" class="btn btn-primary mt-auto mt-2">Agregar <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                 </a>
             </div>
         </div>

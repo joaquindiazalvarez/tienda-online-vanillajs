@@ -32,8 +32,8 @@ Para empezar, tienes dos opciones:
 La primera es buscar en la barra de búsqueda:  
 ![barra](https://imagizer.imageshack.com/img924/6120/QDwVsy.png)  
 
-Esta barra filtrara los productos por los caracteres que hayas ingresado(Si es que coinciden con el nombre del producto)  
-Esta barra también posee un selector de categoría:  
+Esta barra filtrará los productos por los caracteres que hayas ingresado(Si es que coinciden con el nombre del producto)  
+También posee un selector de categoría:  
 
 ![cat](https://imagizer.imageshack.com/img924/5629/3tDWeF.png)  
 

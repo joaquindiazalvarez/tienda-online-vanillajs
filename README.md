@@ -1,7 +1,8 @@
 # ⚡API tienda online
 ## Sobre este proyecto...
-  Este es un proyecto, el cual está dividido en frontend y backend    
+  Este es un proyecto el cual está dividido en frontend y backend    
   Este repositorio pertenece a la parte del frontend (Vanilla JS)  
+  Para el proyecto usé el [boilerplate de 4Geeks "vanilla-hello"](https://github.com/4GeeksAcademy/vanillajs-hello)  
   [pincha aquí para ir al repositorio del backend](https://github.com/joaquindiazalvarez/tienda-online-backend-flask-mysql)  
   
 ## Descripción...

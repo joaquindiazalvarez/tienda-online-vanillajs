@@ -1896,7 +1896,7 @@ module.exports = {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "/* @font-face {\r\n  font-family: \"LTEnergy-Bolditalic\";\r\n  src: url('./fonts/LTEnergy-BoldItalic.ttf') format('truetype');\r\n}  */\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  background-color: black;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  color: black;\r\n  background-color: rgb(255, 255, 255);\r\n  text-align: center;\r\n  margin: 0;\r\n  padding: 0;\r\n  font: Helvetica;\r\n}\r\n\r\nh4 {\r\n  margin-bottom: 0px;\r\n}\r\n\r\n#header {\r\n  padding: 1em;\r\n  background-color: #222;\r\n  color: white;\r\n  text-align: center;\r\n}\r\n\r\n#header h1 {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n#header p {\r\n  color: white;\r\n}\r\n\r\n[data-component=\"app\"] {\r\n  padding: 1em;\r\n  background: rgb(140, 140, 140);\r\n  min-height: 10em;\r\n  color: #222;\r\n}\r\n\r\n#categoryName {\r\n  font-family: \"Helvetica\";\r\n}\r\n.btnCategory {\r\n  font-weight: bold;\r\n}\r\n.card {\r\n  height: 450px;\r\n}\r\nimg {\r\n  height: auto;\r\n}\r\n.card-img-top {\r\n  height: 280px;\r\n}\r\n#card {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  padding-left: 100px;\r\n  padding-right: 100px;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n#card .card {\r\n  margin: 10px;\r\n  /* min-width: 309px; */\r\n  border-radius: 10px;\r\n  border: 1px solid;\r\n  padding: 40px;\r\n}\r\n.card-img-top {\r\n  border-radius: 10px;\r\n}\r\n.card-title {\r\n  height: 50px;\r\n}\r\n.btnCategory {\r\n  border: 2px solid #000000;\r\n  border-radius: 20px;\r\n  background: rgb(255, 255, 255);\r\n  color: black;\r\n  box-shadow: 1px 1px 5px 1px rgb(255, 255, 255);\r\n}\r\n#message {\r\n  font-weight: bold;\r\n  margin: 100px;\r\n}\r\n", ""]);
+exports.push([module.i, "/* @font-face {\r\n  font-family: \"LTEnergy-Bolditalic\";\r\n  src: url('./fonts/LTEnergy-BoldItalic.ttf') format('truetype');\r\n}  */\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  background-color: black;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  color: black;\r\n  background-color: rgb(230, 230, 230);\r\n  text-align: center;\r\n  margin: 0;\r\n  padding: 0;\r\n  font: Helvetica;\r\n}\r\n\r\n.navbar {\r\n  background-color: rgb(230, 230, 230);\r\n}\r\n\r\nh4 {\r\n  margin-bottom: 0px;\r\n}\r\n\r\n#header {\r\n  padding: 1em;\r\n  background-color: #222;\r\n  color: white;\r\n  text-align: center;\r\n}\r\n\r\n#header h1 {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n#header p {\r\n  color: white;\r\n}\r\n\r\n[data-component=\"app\"] {\r\n  padding: 1em;\r\n  background: rgb(140, 140, 140);\r\n  min-height: 10em;\r\n  color: #222;\r\n}\r\n#app ~ div,\r\n#app ~ ul {\r\n  background-color: rgb(230, 230, 230);\r\n}\r\n\r\n#categoryName {\r\n  font-family: \"Helvetica\";\r\n}\r\n.btnCategory {\r\n  font-weight: bold;\r\n}\r\n.card {\r\n  height: 450px;\r\n}\r\nimg {\r\n  height: auto;\r\n}\r\n.card-img-top {\r\n  height: 280px;\r\n}\r\n#card {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  padding-left: 100px;\r\n  padding-right: 100px;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n#card .card {\r\n  margin: 10px;\r\n  /* min-width: 309px; */\r\n  border-radius: 10px;\r\n  border: 1px solid;\r\n  padding: 40px;\r\n}\r\n.card-img-top {\r\n  border-radius: 10px;\r\n}\r\n.card-title {\r\n  height: 50px;\r\n}\r\n.labeled {\r\n  text-decoration: line-through;\r\n}\r\n.btnCategory {\r\n  border: 2px solid #000000;\r\n  border-radius: 20px;\r\n  background: rgb(255, 255, 255);\r\n  color: black;\r\n  box-shadow: 1px 1px 5px 1px rgb(255, 255, 255);\r\n}\r\n#message {\r\n  font-weight: bold;\r\n  margin: 100px;\r\n}\r\nul {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  list-style: none;\r\n}\r\nli {\r\n  margin: 3px;\r\n}\r\np {\r\n  margin: 5px;\r\n}\r\n.form-check {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n.form-check-input {\r\n  padding-top: 9px;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -10975,7 +10975,9 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener("load", function () {
   Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["search"])();
-  Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["select"])();
+  Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["selectCategory"])();
+  Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["selectOrder"])();
+  Object(_views_index_js__WEBPACK_IMPORTED_MODULE_1__["checkDiscount"])();
   var app = new _views_index_js__WEBPACK_IMPORTED_MODULE_1__["default"](document.getElementById("app")); // A very simple component setup
 
   app.render();
@@ -11019,7 +11021,7 @@ var Card = /*#__PURE__*/function () {
   _createClass(Card, [{
     key: "render",
     value: function render() {
-      if (this.elem) this.elem.innerHTML = "\n        <div class=\"card col\" style=\"width: 18rem;\">\n            <img src=\"".concat(this.url_image, "\" class=\"card-img-top\">\n            <div class=\"card-body\">\n                <h5 class=\"card-title\">").concat(this.name, "</h5>\n                <p class=\"card-text\">$").concat(this.price, "</p>\n                <a href=\"#\" class=\"btn btn-primary\">Agregar <i class=\"fas fa-shopping-cart\" aria-hidden=\"true\"></i>\n                </a>\n            </div>\n        </div>\n        ");
+      if (this.elem) this.elem.innerHTML = "\n        <div class=\"card col\" style=\"width: 18rem;\">\n            <img src=\"".concat(this.url_image, "\" class=\"card-img-top\">\n            <div class=\"card-body\">\n                <h5 class=\"card-title\">").concat(this.name, "</h5>\n                <p class=\"card-text ").concat(this.discount > 0 ? "labeled" : "", "\">$").concat(this.price, "</p>\n                ").concat(this.discount > 0 ? '<h4 class="card-title-labeled">$' + Math.floor((this.price * (100 - this.discount)).toString() / 100) + "</h4>" : "", "\n                <a href=\"#\" class=\"btn btn-primary\">Agregar <i class=\"fas fa-shopping-cart\" aria-hidden=\"true\"></i>\n                </a>\n            </div>\n        </div>\n        ");
     }
   }]);
 
@@ -11074,15 +11076,16 @@ module.exports = content.locals || {};
 /*!****************************!*\
   !*** ./src/views/index.js ***!
   \****************************/
-/*! exports provided: default, select, search, renderProducts, bringAllProducts */
+/*! exports provided: default, selectCategory, search, selectOrder, checkDiscount, bringAllProducts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "select", function() { return select; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectCategory", function() { return selectCategory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "search", function() { return search; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderProducts", function() { return renderProducts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectOrder", function() { return selectOrder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkDiscount", function() { return checkDiscount; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bringAllProducts", function() { return bringAllProducts; });
 /* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/card */ "./src/components/card.js");
 
@@ -11138,7 +11141,8 @@ var map = {
   BEBIDAS: "bebida",
   SNACKS: "snack",
   CERVEZAS: "cerveza",
-  VODKAS: "vodka"
+  VODKAS: "vodka",
+  "TODOS LOS PRODUCTOS": "todos"
 }; //var productState = [];
 
 var App = /*#__PURE__*/function () {
@@ -11152,7 +11156,7 @@ var App = /*#__PURE__*/function () {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      if (this.elem) this.elem.innerHTML = "\n        <section data-component=\"app\">\n        <h1 id=\"categoryName\"><b><i>TODOS LOS PRODUCTOS</i></b></h1>  \n        <div class=\"container\">\n          <div id=\"categoryButtons\">      \n          </div>            \n        </div>\n        </section>\n        ";
+      if (this.elem) this.elem.innerHTML = "\n        <section data-component=\"app\">\n        <h1 id=\"categoryName\"><b><i id=\"categoryPressed\">TODOS LOS PRODUCTOS</i></b></h1>  \n        <div class=\"container\">\n          <div id=\"categoryButtons\">      \n          </div>            \n        </div>\n        </section>\n        ";
       addButton("BEBIDAS ENERGÉTICAS");
       addButton("PISCOS");
       addButton("RON");
@@ -11170,29 +11174,88 @@ var App = /*#__PURE__*/function () {
 
 var changeTitle = function changeTitle(category) {
   var categoryNames = document.getElementById("categoryName");
-  categoryNames.innerHTML = "<b><i>".concat(category, "</i></b>");
+  categoryNames.innerHTML = "<b><i id=\"categoryPressed\">".concat(category, "</i></b>");
 };
 
-var select = function select() {
+var selectCategory = function selectCategory() {
   var select = document.querySelector("#categorySelector");
   select.addEventListener("change", function (e) {
-    var inputValue = document.querySelector("input").value;
-    var selected = document.querySelector("#categorySelector").options[document.querySelector("#categorySelector").selectedIndex].value;
-    bringProductsSearch(inputValue, selected);
-    console.log("soy select", e.target.value);
+    var checked = document.querySelector("#check").checked;
+    var inputValue = document.getElementById("searchInput").value;
+    var categorySelected = document.querySelector("#categorySelector").value;
+    var orderSelectedValue = document.getElementById("orderSelector").value;
+    bringProductsSearch(inputValue, categorySelected, orderSelectedValue, checked);
   });
 };
 var search = function search() {
-  var input = document.querySelector("input");
+  var input = document.getElementById("searchInput");
   input.addEventListener("keyup", function (e) {
+    var checked = document.querySelector("#check").checked;
     var categorySelected = document.querySelector("#categorySelector").value;
-    bringProductsSearch(e.target.value, categorySelected);
-    console.log("soy search");
+    var orderSelectedValue = document.getElementById("orderSelector").value;
+    bringProductsSearch(e.target.value, categorySelected, orderSelectedValue, checked);
     changeTitle("BÚSQUEDA");
   });
 };
-var renderProducts = function renderProducts() {
-  Object(_components_card__WEBPACK_IMPORTED_MODULE_0__["renderCards"])(_toConsumableArray(productState));
+var selectOrder = function selectOrder() {
+  var parent = document.getElementById("orderSelector");
+  parent.addEventListener("change", function (e) {
+    var checked = document.querySelector("#check").checked;
+    var orderSelectedValue = document.getElementById("orderSelector").value;
+    var categoryPressed = document.getElementById("categoryPressed").innerHTML;
+
+    if (categoryPressed === "BÚSQUEDA") {
+      var inputValue = document.getElementById("searchInput").value;
+      var categorySelected = document.querySelector("#categorySelector").value;
+      bringProductsSearch(inputValue, categorySelected, orderSelectedValue, checked);
+    } else bringProductsByCategory(map[categoryPressed], orderSelectedValue, checked);
+  });
+};
+var checkDiscount = function checkDiscount() {
+  var parent = document.getElementById("check");
+  parent.addEventListener("change", function (e) {
+    console.log("prueba");
+    var checked = document.querySelector("#check").checked;
+    var orderSelectedValue = document.getElementById("orderSelector").value;
+    var categoryPressed = document.getElementById("categoryPressed").innerHTML;
+
+    if (categoryPressed === "BÚSQUEDA") {
+      var inputValue = document.getElementById("searchInput").value;
+      var categorySelected = document.querySelector("#categorySelector").value;
+      bringProductsSearch(inputValue, categorySelected, orderSelectedValue, checked);
+    } else bringProductsByCategory(map[categoryPressed], orderSelectedValue, checked);
+  });
+};
+
+var mountPageSelector = function mountPageSelector(pages) {
+  var parent = document.getElementById("pageSelector");
+  parent.innerHTML = "";
+
+  var _loop = function _loop(i) {
+    var page = i + 1;
+    var newPill = document.createElement("li");
+    newPill.setAttribute("class", "nav-item");
+    newPill.innerHTML = "<button class=\"btn btn-primary\">".concat(page.toString(), "</button>");
+    newPill.addEventListener("click", function (e) {
+      var checked = document.querySelector("#check").checked;
+      var categoryPressed = document.getElementById("categoryPressed").innerHTML;
+      var orderSelectedValue = document.getElementById("orderSelector").value;
+
+      if (categoryPressed === "BÚSQUEDA") {
+        var inputValue = document.getElementById("searchInput").value;
+        var categorySelected = document.querySelector("#categorySelector").value;
+        bringProductsSearch(inputValue, categorySelected, orderSelectedValue, checked, page);
+      } else {
+        var _categoryPressed = document.getElementById("categoryPressed").innerHTML;
+        bringProductsByCategory(map[_categoryPressed], orderSelectedValue, checked, page);
+      }
+    });
+    parent.appendChild(newPill);
+  };
+
+  for (var i = 0; i < pages; i++) {
+    _loop(i);
+  }
 };
 
 var addButton = function addButton(category) {
@@ -11203,17 +11266,22 @@ var addButton = function addButton(category) {
   newButton.innerHTML = category;
   newButton.addEventListener("click", function (e) {
     changeTitle(e.target.value);
-    bringProductsByCategory(map[e.target.value]);
+    var checked = document.querySelector("#check").checked;
+    var orderSelectorValue = document.getElementById("orderSelector").value;
+    bringProductsByCategory(map[e.target.value], orderSelectorValue, checked);
   });
   var categoryButtons = document.getElementById("categoryButtons");
   categoryButtons.appendChild(newButton);
 };
 
-var bringProductsByCategory = function bringProductsByCategory(category) {
+var bringProductsByCategory = function bringProductsByCategory(category, order, discount) {
+  var page = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
-    category: category
+    category: category,
+    order: order,
+    discount: discount
   });
   var requestOptions = {
     method: "POST",
@@ -11221,22 +11289,38 @@ var bringProductsByCategory = function bringProductsByCategory(category) {
     body: raw,
     redirect: "follow"
   };
-  fetch("https://tienda-online-backend.herokuapp.com/categories/getbycategory", requestOptions).then(function (response) {
+  fetch("https://tienda-online-backend.herokuapp.com/categories/getbycategory/".concat(page, "/"), requestOptions).then(function (response) {
     return response.json();
   }).then(function (result) {
-    productState = _toConsumableArray(result.products);
-    renderProducts();
+    Object(_components_card__WEBPACK_IMPORTED_MODULE_0__["renderCards"])(_toConsumableArray(result.products));
+    var parent = document.getElementById("pageSelector");
+    parent.innerHTML = "";
+
+    if (result.pages > 1) {
+      mountPageSelector(result.pages);
+
+      var _parent = document.getElementById("pageSelector");
+
+      var pageAmount = document.createElement("p");
+      pageAmount.innerHTML = "P\xE1gina ".concat(page, " de ").concat(result.pages);
+
+      _parent.appendChild(pageAmount);
+    }
   })["catch"](function (error) {
     return console.log("error", error);
   });
 };
 
-var bringProductsSearch = function bringProductsSearch(search, category) {
+var bringProductsSearch = function bringProductsSearch(search, category, order, discount) {
+  var page = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+  console.log(order);
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
     search: search,
-    category: category
+    category: category,
+    order: order,
+    discount: discount
   });
   var requestOptions = {
     method: "POST",
@@ -11244,21 +11328,31 @@ var bringProductsSearch = function bringProductsSearch(search, category) {
     body: raw,
     redirect: "follow"
   };
-  fetch("https://tienda-online-backend.herokuapp.com/search", requestOptions).then(function (response) {
+  fetch("https://tienda-online-backend.herokuapp.com/search/".concat(page, "/"), requestOptions).then(function (response) {
     return response.json();
   }).then(function (result) {
-    {
-      productState = _toConsumableArray(result.products);
-      Object(_components_card__WEBPACK_IMPORTED_MODULE_0__["renderCards"])(productState);
-    }
+    Object(_components_card__WEBPACK_IMPORTED_MODULE_0__["renderCards"])(_toConsumableArray(result.products));
 
-    if (productState.length === 0) {
+    if (result.products.length === 0) {
       var content = document.getElementById("card");
       var message = document.createElement("h1");
       message.setAttribute("id", "message");
       message.innerHTML = "No se encontró el producto!";
       content.appendChild(message);
-      console.log("prueba");
+    }
+
+    var parent = document.getElementById("pageSelector");
+    parent.innerHTML = "";
+
+    if (result.pages > 1) {
+      mountPageSelector(result.pages);
+
+      var _parent2 = document.getElementById("pageSelector");
+
+      var pageAmount = document.createElement("p");
+      pageAmount.innerHTML = "P\xE1gina ".concat(page, " de ").concat(result.pages);
+
+      _parent2.appendChild(pageAmount);
     }
   })["catch"](function (error) {
     return console.log("error", error);
@@ -11270,7 +11364,7 @@ var bringAllProducts = function bringAllProducts() {
     method: "GET",
     redirect: "follow"
   };
-  fetch("https://tienda-online-backend.herokuapp.com/getall", requestOptions).then(function (response) {
+  fetch("https://backend-tienda-online.herokuapp.com/getall", requestOptions).then(function (response) {
     return response.json();
   }).then(function (result) {
     Object(_components_card__WEBPACK_IMPORTED_MODULE_0__["renderCards"])(_toConsumableArray(result.products));
@@ -11288,8 +11382,8 @@ var bringAllProducts = function bringAllProducts() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\onCode\BSALE\front4\vanillajs-hello\node_modules\error-overlay-webpack-plugin\lib\entry-basic.js */"./node_modules/error-overlay-webpack-plugin/lib/entry-basic.js");
-__webpack_require__(/*! C:\onCode\BSALE\front4\vanillajs-hello\node_modules\error-overlay-webpack-plugin\lib\entry-devserver.js */"./node_modules/error-overlay-webpack-plugin/lib/entry-devserver.js");
+__webpack_require__(/*! C:\onCode\BSALE\front-4geeks\vanillajs-hello\node_modules\error-overlay-webpack-plugin\lib\entry-basic.js */"./node_modules/error-overlay-webpack-plugin/lib/entry-basic.js");
+__webpack_require__(/*! C:\onCode\BSALE\front-4geeks\vanillajs-hello\node_modules\error-overlay-webpack-plugin\lib\entry-devserver.js */"./node_modules/error-overlay-webpack-plugin/lib/entry-devserver.js");
 module.exports = __webpack_require__(/*! ./src/app.js */"./src/app.js");
 
 

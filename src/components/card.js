@@ -18,7 +18,18 @@ export default class Card {
             <img src="${this.url_image}" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">${this.name}</h5>
-                <p class="card-text">$${this.price}</p>
+                <p class="card-text ${this.discount > 0 ? "labeled" : ""}">$${
+        this.price
+      }</p>
+                ${
+                  this.discount > 0
+                    ? '<h4 class="card-title-labeled">$' +
+                      Math.floor(
+                        (this.price * (100 - this.discount)).toString() / 100
+                      ) +
+                      "</h4>"
+                    : ""
+                }
                 <a href="#" class="btn btn-primary">Agregar <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                 </a>
             </div>

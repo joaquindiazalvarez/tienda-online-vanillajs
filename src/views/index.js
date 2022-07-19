@@ -33,7 +33,8 @@ const map = {
   BEBIDAS: "bebida",
   SNACKS: "snack",
   CERVEZAS: "cerveza",
-  VODKAS: "vodka"
+  VODKAS: "vodka",
+  "TODOS LOS PRODUCTOS": "todos"
 };
 //var productState = [];
 export default class App {
@@ -46,7 +47,7 @@ export default class App {
     if (this.elem)
       this.elem.innerHTML = `
         <section data-component="app">
-        <h1 id="categoryName"><b><i>TODOS LOS PRODUCTOS</i></b></h1>  
+        <h1 id="categoryName"><b><i id="categoryPressed">TODOS LOS PRODUCTOS</i></b></h1>  
         <div class="container">
           <div id="categoryButtons">      
           </div>            
@@ -64,31 +65,69 @@ export default class App {
 }
 const changeTitle = category => {
   let categoryNames = document.getElementById("categoryName");
-  categoryNames.innerHTML = `<b><i>${category}</i></b>`;
+  categoryNames.innerHTML = `<b><i id="categoryPressed">${category}</i></b>`;
 };
-export const select = () => {
+export const selectCategory = () => {
   var select = document.querySelector("#categorySelector");
   select.addEventListener("change", e => {
-    let inputValue = document.querySelector("input").value;
-    let selected = document.querySelector("#categorySelector").options[
-      document.querySelector("#categorySelector").selectedIndex
-    ].value;
-    bringProductsSearch(inputValue, selected);
-    console.log("soy select", e.target.value);
+    let inputValue = document.getElementById("searchInput").value;
+    let categorySelected = document.querySelector("#categorySelector").value;
+    let orderSelectedValue = document.getElementById("orderSelector").value;
+    bringProductsSearch(inputValue, categorySelected, orderSelectedValue);
   });
 };
 export const search = () => {
-  const input = document.querySelector("input");
+  const input = document.getElementById("searchInput");
   input.addEventListener("keyup", function(e) {
     let categorySelected = document.querySelector("#categorySelector").value;
-    bringProductsSearch(e.target.value, categorySelected);
-    console.log("soy search");
+    let orderSelectedValue = document.getElementById("orderSelector").value;
+    bringProductsSearch(e.target.value, categorySelected, orderSelectedValue);
     changeTitle("BÚSQUEDA");
   });
 };
+export const selectOrder = () => {
+  var select = document.querySelector("#orderSelector");
+  select.addEventListener("change", e => {
+    let orderSelectedValue = document.getElementById("orderSelector").value;
+    let categoryPressed = document.getElementById("categoryPressed").innerHTML;
+    if (categoryPressed === "BÚSQUEDA") {
+      let inputValue = document.getElementById("searchInput").value;
+      let categorySelected = document.querySelector("#categorySelector").value;
+      bringProductsSearch(inputValue, categorySelected, orderSelectedValue);
+    } else bringProductsByCategory(map[categoryPressed], orderSelectedValue);
+  });
+};
+const mountPageSelector = pages => {
+  let parent = document.getElementById("pageSelector");
+  parent.innerHTML = "";
+  for (let i = 0; i < pages; i++) {
+    let page = i + 1;
+    let newPill = document.createElement("li");
+    newPill.setAttribute("class", "nav-item");
+    newPill.innerHTML = `<button class="btn btn-primary">${page.toString()}</button>`;
+    newPill.addEventListener("click", function(e) {
+      let categoryPressed = document.getElementById("categoryPressed")
+        .innerHTML;
+      let orderSelectedValue = document.getElementById("orderSelector").value;
+      if (categoryPressed === "BÚSQUEDA") {
+        let inputValue = document.getElementById("searchInput").value;
+        let categorySelected = document.querySelector("#categorySelector")
+          .value;
+        bringProductsSearch(
+          inputValue,
+          categorySelected,
+          orderSelectedValue,
+          page
+        );
+      } else {
+        let categoryPressed = document.getElementById("categoryPressed")
+          .innerHTML;
+        bringProductsByCategory(map[categoryPressed], orderSelectedValue, page);
+      }
+    });
 
-export const renderProducts = () => {
-  renderCards([...productState]);
+    parent.appendChild(newPill);
+  }
 };
 
 const addButton = category => {
@@ -99,18 +138,20 @@ const addButton = category => {
   newButton.innerHTML = category;
   newButton.addEventListener("click", function(e) {
     changeTitle(e.target.value);
-    bringProductsByCategory(map[e.target.value]);
+    let orderSelectorValue = document.getElementById("orderSelector").value;
+    bringProductsByCategory(map[e.target.value], orderSelectorValue);
   });
   let categoryButtons = document.getElementById("categoryButtons");
   categoryButtons.appendChild(newButton);
 };
 
-const bringProductsByCategory = category => {
+const bringProductsByCategory = (category, order, page = 1) => {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   var raw = JSON.stringify({
-    category: category
+    category: category,
+    order: order
   });
 
   var requestOptions = {
@@ -121,24 +162,34 @@ const bringProductsByCategory = category => {
   };
 
   fetch(
-    "https://tienda-online-backend.herokuapp.com/categories/getbycategory",
+    `https://backend-tienda-online.herokuapp.com/categories/getbycategory/${page}/`,
     requestOptions
   )
     .then(response => response.json())
     .then(result => {
-      productState = [...result.products];
-      renderProducts();
+      renderCards([...result.products]);
+      let parent = document.getElementById("pageSelector");
+      parent.innerHTML = "";
+      if (result.pages > 1) {
+        mountPageSelector(result.pages);
+        let parent = document.getElementById("pageSelector");
+        let pageAmount = document.createElement("p");
+        pageAmount.innerHTML = `Página ${page} de ${result.pages}`;
+        parent.appendChild(pageAmount);
+      }
     })
     .catch(error => console.log("error", error));
 };
 
-const bringProductsSearch = (search, category) => {
+const bringProductsSearch = (search, category, order, page = 1) => {
+  console.log(order);
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   var raw = JSON.stringify({
     search: search,
-    category: category
+    category: category,
+    order: order
   });
 
   var requestOptions = {
@@ -148,21 +199,28 @@ const bringProductsSearch = (search, category) => {
     redirect: "follow"
   };
 
-  fetch("https://tienda-online-backend.herokuapp.com/search", requestOptions)
+  fetch(
+    `https://backend-tienda-online.herokuapp.com/search/${page}/`,
+    requestOptions
+  )
     .then(response => response.json())
     .then(result => {
-      {
-        productState = [...result.products];
-        renderCards(productState);
-      }
-      if (productState.length === 0) {
+      renderCards([...result.products]);
+      if (result.products.length === 0) {
         let content = document.getElementById("card");
         let message = document.createElement("h1");
         message.setAttribute("id", "message");
         message.innerHTML = "No se encontró el producto!";
         content.appendChild(message);
-
-        console.log("prueba");
+      }
+      let parent = document.getElementById("pageSelector");
+      parent.innerHTML = "";
+      if (result.pages > 1) {
+        mountPageSelector(result.pages);
+        let parent = document.getElementById("pageSelector");
+        let pageAmount = document.createElement("p");
+        pageAmount.innerHTML = `Página ${page} de ${result.pages}`;
+        parent.appendChild(pageAmount);
       }
     })
     .catch(error => console.log("error", error));
@@ -174,7 +232,7 @@ export const bringAllProducts = () => {
     redirect: "follow"
   };
 
-  fetch("https://tienda-online-backend.herokuapp.com/getall", requestOptions)
+  fetch("https://backend-tienda-online.herokuapp.com/getall", requestOptions)
     .then(response => response.json())
     .then(result => {
       renderCards([...result.products]);

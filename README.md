@@ -64,7 +64,7 @@ Esta APP está hecha con HTML, CSS y JavaScript Puro(Vanilla JS)
 - El HTML está hecho en un solo archivo
 - El CSS también, está hecho en un solo archivo
 ## JavaScript:
-Está hecho en un solo archivo, usando la lógica de vistas y componentes.
+Está hecho en tres archivos, usando la lógica de vistas y componentes.
 
 Tenemos un archivo Padre, que es el app.js, donde está la función load que renderiza todo lo que debe pintarse cuando carga la página que viene importado del index.js
 

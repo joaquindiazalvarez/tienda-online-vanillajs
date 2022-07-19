@@ -1,4 +1,4 @@
-# ⚡API tienda online
+# ⚡VanillaJS - tienda online
 ## Sobre este proyecto...
   Este es un proyecto el cual está dividido en frontend y backend    
   Este repositorio pertenece a la parte del frontend (Vanilla JS)  
